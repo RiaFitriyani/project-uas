@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Login | VB4</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="bg"></div>
+        <h1 style="text-align: center;"><a href="home.html">
+					<img src="img/logo.jpeg" alt="" class="logo">
+				</a></h1>
+        <div class="container">
+            <form onsubmit="login()">
+                <h1 style="text-align: center;">
+                <img src="../img/logo.jpeg" alt="" class="logo">login</h1>
+                <label>Username</label><br>
+                <input required id="username" type="text"><br>
+                <label>Password</label><br>
+                <input required id="password" type="password"><br>
+                <button>sign in</button>
+                <p> Belum punya akun?
+                  <a href="register.html">Register di sini</a>
+                </p>
+            </form>
+        </div>
+        <footer>
+            <p>Develop by Mahasiswa STT-NF &copy;2023</p>
+        </footer>
+        <script>
+            function login() {
+                event.preventDefault();
+                username =document.getElementById("username").value;
+                password =document.getElementById("password").value;
+
+                if (username == "admin" && password == "admin") {
+                    alert("Login sebagai admin berhasil!");
+                    window.location = "../admin/daftar-booking.html";
+                }
+                else {
+                    alert("Login berhasil!");
+                    window.location = "../home.html";
+                }
+                    
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <title>Booking | VB4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- body container -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <!-- header start------------- -->
+            <header class="col-md-12">
+                <h1 align="center">
+                    <a href="home.html">
+                        <img src="img/logo.jpeg" alt="" class="logo">
+                    </a>
+                </h1>
+                <nav class="navbar navbar-expand-lg ">
+                    <img src="dist/img/logo.png" alt="" width="60px">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="home.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="testimoni.html">Testimoni<span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="booking.html">Booking</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="artikel.html">Layanan</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="tentangkami.html">Tentang Kami</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"> <a class=""
+                                    href="registration/login.html">Login</a> </button>
+                            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"> <a class=""
+                                    href="registration/register.html">Sign Up</a> </button>
+                        </form>
+                    </div>
+                </nav>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Booking</li>
+                    </ol>
+                </nav>
+            </header>
+            <!-- header end--------------------- -->
+
+            <!-- main content start------------------ -->
+            <main>
+                <div>
+                    <fieldset class="border border-dark p-3">
+                        <legend class="float-none w-auto px-0">Booking Periksa Kesehatan Gigi</legend>
+                        <div class="row">
+                            <form onsubmit="buatbooking()">
+                                <div class="mb-3">
+                                    <label for="nama" class="form-label">Nama Pasien</label>
+                                    <input type="text" class="form-control" id="nama" placeholder="Nama">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="dokter" class="form-label">Pilih Dokter</label>
+                                    <select style="width: fit-content;" id="dokter" class="form-control"
+                                        aria-label="Default select example">
+                                        <option selected>Pilih Dokter</option>
+                                        <option value="1">drg M.Fauzan</option>
+                                        <option value="2">drg Masfirah</option>
+                                        <option value="3">drg Ria Fitriani</option>
+                                        <option value="3">drg M.Salman Aridho</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="layanan" class="form-label">Pilih Layanan</label>
+                                    <select style="width: fit-content;" id="layanan" class="form-control"
+                                        aria-label="Default select example">
+                                        <option selected>Pilih Layanan</option>
+                                        <option value="1">Perawatan gigi anak</option>
+                                        <option value="2">Perawatan Orthodonti</option>
+                                        <option value="3">pencabutan gigi</option>
+                                        <option value="4">perawatanpencegahan</option>
+                                        <option value="5">Perawatan saluran akar</option>
+                                        <option value="5">periodontal</option>
+                                        <option value="6">Prostetik</option>
+                                        <option value="7">Estetika</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="layanan" class="form-label">Pilih Pebayaran</label>
+                                    <p>
+                                        <label><input type="radio" name="sound_system"
+                                                value="sound_system" />Cash</label>
+                                        <label><input type="radio" name="sound_system"
+                                                value="sound_system" />Transfer</label>
+                                        <label><input type="radio" name="sound_system" value="sound_system" />Creadit
+                                            Cart</label>
+                                    </p>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="keluhan" class="form-label">Keluhan</label>
+                                    <textarea class="form-control" placeholder="Jelaskan keluhan anda"
+                                        id="floatingTextarea"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="tanggal" class="form-label">Tanggal Periksa</label>
+                                    <input style="width: fit-content;" class="form-control" type="date" name=""
+                                        id="tanggal">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="umur" class="form-label">Umur</label>
+                                    <input style="width: 100px;" class="form-control" type="number" name="" id="umur"
+                                        min="1" placeholder="Umur">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="telepon" class="form-label">Telepon/HP</label>
+                                    <input style="width: 300px;" class="form-control" type="tel" name="" id="telepon"
+                                        min="1" placeholder="Nomor Telepon">
+
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input style="width: 300px;" class="form-control" type="email" name="" id="email"
+                                        min="1" placeholder="email">
+                                </div>
+                                <div class="mb-3">
+
+                                    <button class="btn btn-info" type="submit">Kirim</button>
+                                    <button class="btn btn-danger" type="reset">Reset</button>
+                                </div>
+                            </form>
+                        </div>
+                    </fieldset>
+                </div>
+            </main>
+            <!-- main content end----------------------- -->
+
+            <footer>
+                <p><strong>Develed by Mahasiswa STT-NF&copy;2023</strong></p>
+                <div class="socmed-link">
+                    <a href="https://github.com/muhamadfauzan22"><img class="icon" src="img/github.png" alt=""></a>
+                    <a href="https://www.linkedin.com/in/muhamad-fauzan-328022252/"><img class="icon"
+                            src="img/linkedin.png" alt=""></a>
+                    <a href="https://instagram.com/fauzanmhmd22?igshid=ZmZhODViOGI="><img class="icon"
+                            src="img/instagram.png" alt=""></a>
+                </div>
+            </footer>
+
+
+
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+                crossorigin="anonymous"></script>
+
+
+            <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+                crossorigin="anonymous"></script>
+
+            <script>
+                function buatbooking() {
+                    window.location = 'admin/daftar-booking.html';
+                    event.preventDefault();
+                    console.log("aaaaaaaa")
+                }
+            </script>
+
+</body>
+
+</html>

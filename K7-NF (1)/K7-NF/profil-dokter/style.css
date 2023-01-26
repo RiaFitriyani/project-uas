@@ -1,0 +1,11 @@
+
+.card{display: flex;flex-direction: row;}
+.card>*{flex: 1;}
+img.potret {
+    height: auto;
+    width: 100%;
+}
+
+.image-container {
+    width: 100px
+}

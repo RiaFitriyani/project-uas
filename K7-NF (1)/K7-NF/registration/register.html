@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Halaman Login | VB4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bg"></div>
+    <h1 style="text-align: center;"><a href="home.html">
+					<img src="img/logo.jpeg" alt="" class="logo">
+				</a></h1>
+    <div class="container">
+        <form onsubmit="regist()">
+            <h1 style="text-align: center;"><img src="../img/logo.jpeg" alt="" class="logo">registrasi</h1>
+            <label>Nama Lengkap</label>
+            <br>
+            <input required type="text">
+            <br>
+            <label>Email</label>
+            <br>
+            <input required type="email">
+            <br>
+            <label>Password</label>
+            <br>
+            <input required type="password">
+            <br>
+            <label>Username</label>
+            <br>
+            <input required type="text">
+            <label>Cek Password</label>
+            <br>
+            <input required type="text">
+            <button type="submit">Daftar</button>
+            <p> Sudah punya akun?
+                <a href="login.html">Login di sini</a>
+            </p>
+        </form>
+    </div>
+    <footer>
+        <p>Develop by Mahasiswa STT-NF &copy;2023</p>
+    </footer>
+    <script>
+        function regist() {
+            event.preventDefault();
+            window.location = "../home.html";
+        }
+    </script>
+</body>
+
+</html>
